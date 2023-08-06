@@ -47,7 +47,8 @@ echo ${CLIENT_PUBLIC_KEY} > ./"${userName}${PUB_KEY}"
 
 read SERVER_PUBLIC_KEY < /etc/wireguard/server.pub
 
-# We get the following client IP address
+# Получаем следующий IP адрес 
+
 read OCTET_IP < /etc/wireguard/last_used_ip.var
 if
 	[[ $OCTET_IP -ge 254 ]]; then
